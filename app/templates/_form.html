@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/errors.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+
+    <link href="https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner:wght@400..700&family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
+    <meta charset="UTF-8">
+    {% block title -%}
+    {% if title -%}
+        <title>Перевёртыш - {{ title }}</title>
+    {% else -%}
+        <title>Перевёртыш</title>
+    {% endif -%}
+    {% endblock title -%}
+</head>
+<body class="body">
+{% block content -%}
+
+{% for category, message in get_flashed_messages(True) -%}
+    <div class="flash {{ category }}">{{ message }}</div>
+{% endfor -%}
+
+{% endblock content -%}
+</body>
+</html>

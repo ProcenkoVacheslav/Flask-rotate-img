@@ -1,0 +1,12 @@
+{% extends '_form.html' -%}
+
+{% block content -%}
+{{ super() }}
+
+<div class="download_block">
+    <a class="download_button" href="/static/rotated_imgs/{{file }}" download>Скачать</a>
+    <a class="download_button return" href="{{ url_for('index') }}">Заново</a>
+</div>
+
+
+{% endblock content -%}

@@ -1,0 +1,22 @@
+{% extends '_form.html' -%}
+
+{% block content -%}
+{{ super() }}
+
+<div class="index_text">
+    <div style="width: 60%;">
+        <p>Загрузите ваше изображение и переверните его в любую сторону</p>
+    </div>
+</div>
+
+<div class="upload_block">
+    <form action="{{ url_for('upload') }}" method="post" enctype="multipart/form-data">
+        <label class="input-file_2">
+            <input type="file" name="img_file">	
+            <span>Выберите файл</span>	
+        </label>
+        <p><input class="input_file" type="submit" value="Загрузить"></p>
+    </form>
+</div>
+    
+{% endblock content -%}

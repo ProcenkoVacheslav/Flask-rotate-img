@@ -1,0 +1,20 @@
+{% extends '_form.html' -%}
+
+{% block content -%}
+{{ super() }}
+
+<div class="buttons_block">
+    <div class="second_buttons_block">
+        <form action="{{ url_for('do_rotate', direction='left') }}">
+            <input class="input_buttons" type="submit" value="Повернуть на лево" name="left_rotate">
+        </form>
+        <form action="{{ url_for('do_rotate', direction='right') }}">
+            <input class="input_buttons" type="submit" value="Повернуть на право" name="right_rotate">
+        </form>
+        <form action="{{ url_for('do_rotate', direction='button') }}">
+            <input class="input_buttons" type="submit" value="Перевернуть" name="button_rotate">
+        </form>  
+    </div>
+</div>
+
+{% endblock content -%}

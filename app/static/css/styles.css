@@ -1,0 +1,148 @@
+.body {
+    background-color: antiquewhite;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Lato", sans-serif;
+}
+
+/* Upload img button */
+
+.input-file_2 {
+	position: relative;
+	display: inline-block;
+    margin: 1%;
+    transition: .2s;
+}
+
+.input-file_2 span {
+	position: relative;
+	display: inline-block;
+	cursor: pointer;
+	outline: none;
+	text-decoration: none;
+	font-size: 150%;
+	vertical-align: middle;
+	color: black;
+	text-align: center;
+	background-color: rgb(0, 195, 255);
+    padding: 5px 80px;
+	box-sizing: border-box;
+	transition: .2s;
+    border: solid black 3px;
+}
+
+.input-file_2 input[type=file] {
+	position: absolute;
+	z-index: -1;
+	opacity: 0;
+	display: block;
+	width: 0;
+	height: 0;
+}
+ 
+.input-file_2:hover {
+    transform: scale(1.1);
+}
+
+.input-file_2 input[type=file]:focus + span {
+	box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+}
+ 
+.input-file_2:hover span {
+	transform: scale(1.01);
+}
+
+.input-file_2:active span {
+	transform: scale(1.01);
+}
+ 
+.input-file_2 input[type=file]:disabled + span {
+	background-color: #eee;
+}
+
+.input_file {
+    font-size: 150%;
+    padding: 1% 32.1%;
+    margin: 1%;
+    background-color: rgb(0, 195, 255);
+    border: solid black 3px;
+    transition: transform .3s;
+}
+
+.input_file:hover {
+    transform: scale(1.1);
+}
+
+/* Index */
+
+.index_text {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 250%;
+    color: blueviolet;
+    margin: 2% 0;
+}
+
+.upload_block {
+    display: flex;
+    justify-content: center;
+}
+
+/* Rotate img */
+
+.input_buttons {
+    font-size: 200%;
+    margin: 2% 5%;
+    width: 100%;
+    background-color: aquamarine;
+    border: solid aqua 2px;
+    border-radius: 20px;
+    transition: transform .3s;
+}
+
+.input_buttons:hover {
+    transform: scale(1.1);
+}
+
+.buttons_block {
+    display: flex;
+    justify-content: center;
+}
+
+.second_buttons_block {
+    width: 30%;
+}
+
+/* Download img */
+
+.download_block {
+    margin-top: 5%;
+    display: flex;
+    gap: 3%;
+    justify-content: center;
+}
+
+.download_button {
+    text-decoration: none;
+    color: blue;
+    font-size: 150%;
+    background-color: cyan;
+    border: solid blue 2px;
+    padding: .5% 5%;
+    border-radius: 10px;
+    transition: transform .3s;
+}
+
+.return {
+    background-color: blue;
+    color: cyan;
+    border: solid cyan 2px;
+}
+
+.download_button:hover {
+    transform: scale(1.1);
+}
